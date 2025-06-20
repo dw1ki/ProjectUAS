@@ -135,7 +135,7 @@ class adminController extends Controller
 
     public function transaksi_create()
     {
-        $jenis_kendaraan = Kendaraan::get();
+        $jenis_kendaraan = Jenis::get();
         $area_parkir = Area::get();
         // dd($jenis_kendaraan);
         return view('cms.transaksi.create', compact('jenis_kendaraan', 'area_parkir'));
@@ -165,7 +165,7 @@ class adminController extends Controller
         //             ->orderBy('kendaraan.id', 'desc')
         //             ->get();
         // return view('cms.data_kendaraan.user', compact('no', 'data_kendaraan'));
-        $jenis_kendaraan = Kendaraan::get();
+        $jenis_kendaraan = jenis::get();
         $area_parkir = Area::get();
         return view('cms.data_kendaraan.create', compact('area_parkir', 'jenis_kendaraan'));
     }

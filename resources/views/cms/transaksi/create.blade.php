@@ -51,7 +51,7 @@
                             <option value="0" disable> -- Pilih --</option>
                             <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
                             @foreach ($jenis_kendaraan as $jk)
-                                    <option value="{{ $jk->id }}">{{ $jk->pemilik }}</option>                                
+                                    <option value="{{ $jk->id }}">{{ $jk->nama }}</option>                                
                             @endforeach
                             <!-- </optgroup> -->
                         </select>

@@ -88,13 +88,14 @@ class authController extends Controller
         if (Auth::guard('role')->attempt($credentials)) {
             $request->session()->regenerate();
             $user = Auth::guard('role')->user();
+            // dd($user);
             if ($user->role == 'admin') {
                 return redirect()->intended('/cms');
             } else{
                 return redirect()->intended('/cms/pengguna');
             }
         }
-        dd('failed');
+        // dd('failed');
         // return back()->with('status-failed', 'login failed : Username and password not valid');
     }
 
